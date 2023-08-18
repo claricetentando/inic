@@ -181,7 +181,7 @@ frases = ["ola meu nome eh cara",
 for frase in frases:
     for palavras in frase.lower().split():
         if palavras in palavras_proibidas:
-            print("essa frase  esta proibida:", palavras)
+            print("essa palavra  esta proibida:", palavras)
             break
     else:
-        print("palavra livre:", frase)
+        print("frase livre:", frase)
