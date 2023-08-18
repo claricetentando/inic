@@ -1,0 +1,2 @@
+# inic
+cod meus 
