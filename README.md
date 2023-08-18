@@ -1,5 +1,5 @@
 # inic
-cod meus 
+codigos meus 
 
 from math import pi
 import sys
@@ -175,5 +175,13 @@ for j in range(1,11):
     if j == 5:
         break
     print(j)  
-        
-        
+palavras_proibidas = ["ola", "cara", "praia"]
+frases = ["ola meu nome eh cara",
+          "eu amo piscina"]
+for frase in frases:
+    for palavras in frase.lower().split():
+        if palavras in palavras_proibidas:
+            print("essa frase  esta proibida:", palavras)
+            break
+    else:
+        print("palavra livre:", frase)
