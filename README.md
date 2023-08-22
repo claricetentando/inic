@@ -185,3 +185,10 @@ for frase in frases:
             break
     else:
         print("frase livre:", frase)
+
+
+        
+arquivo = open("pessoas.csv", "r" )  
+for linha in arquivo:
+    print("nome {} idade {}".format(*linha.split(",")), end=" ")
+arquivo.close()  
