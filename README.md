@@ -1,4 +1,4 @@
-# inic
+# Everything I've learned in the month of August!!!
 codigos meus 
 
 from math import pi
@@ -192,3 +192,52 @@ arquivo = open("pessoas.csv", "r" )
 for linha in arquivo:
     print("nome {} idade {}".format(*linha.split(",")), end=" ")
 arquivo.close()  
+import csv
+with  open("pessoas.csv", "r") as codigo:
+    for pessoa in csv.reader(codigo):
+        print("nome: {} idade: {}".format(*pessoa))
+        
+def calendario(dia):
+    dias = { #dicionario: ne
+        (1,7): "fim de semana",
+        tuple(range(2,7)): "dia de semana", 
+    }
+    gene = (calen for numero, calen in dias.items() if dia in numero)
+    return next(gene, "invalido")
+if __name__ == "__main__":
+    for dia in range(int(input("ate onde vc qr q va o numero"))):
+       print(f"{dia} : {calendario(dia)}")
+genereitor = {i * 2 for i in range(10) if i % 2 == 1}
+iterator = iter(listaa)
+print(next(iterator)) # assim para mostrar o outro um por um 
+#e nao tudo de uma vez
+print(next(iterator))
+for tab in listaa:
+    print(tab)
+dicionario = {f"item: {i}": i * 2 for i in range(10) if i % 2 == 0}
+print(dicionario)
+for item, resultado in dicionario.items():
+    print(f"{item} x 2 = {resultado}")
+
+def tag_block(texto,classe="ola",iniline=False):
+    tag = "ola" if iniline else "div" #vai dar ola qndo for True
+    return f"<{tag}> classe={classe}: {texto} <{tag}>"
+print(tag_block("bem vindo", iniline=True, classe="ok"))
+def tagitems(*itens):
+    lista = " ".join(f"<ul>{item}<ul>" for item in itens)
+    return f"<il>{lista}<il>"
+print(tag_block(tagitems("item 1", "item 2") , classe="info"))
+        
+def executar(funcao):
+    if callable(funcao): #qndo for erro vai dar false e nao vai ser executado mesmo estando la
+        funcao()
+def a():
+    print("bomdia")
+def b():
+    print ("boa tarde")
+
+executar(a)
+executar(b)
+executar(1) #vai dar erro callable ent para
+#toda vez q estiver faça n ser executado mas como?
+    
